@@ -1,5 +1,7 @@
 package Model;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
@@ -33,6 +35,7 @@ public class UniverseRepository implements IUniverseRepository {
 
         PlanetSystem solarSystem = new PlanetSystem("Solar System", sun, planetList,"https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg");
         planetSystems.add(solarSystem);
+        System.out.println("-_-");
     }
 
 

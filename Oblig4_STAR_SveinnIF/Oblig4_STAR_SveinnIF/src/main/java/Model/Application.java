@@ -5,9 +5,11 @@ import io.javalin.plugin.rendering.vue.VueComponent;
 
 
 public class Application {
+
+
     public static void main(String[] args) {
         Javalin app = Javalin.create().start();
-
+        System.out.println("CUMMIES IN MY TUMMIES");
         app.config.enableWebjars();
 
         app.get("/planet-systems/:planet-system-id", new VueComponent("planet-system-detail"));
@@ -24,7 +26,7 @@ public class Application {
 
         app.get("/", ctx -> ctx.result("Hello, world"));
 
-
+        UniverseJSONRepository universeJSONRepository = new UniverseJSONRepository();
 
     }
 }

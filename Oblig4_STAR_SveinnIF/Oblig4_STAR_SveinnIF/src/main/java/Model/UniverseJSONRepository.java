@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class UniverseJSONRepository{
     private File jsonFile;
@@ -26,7 +27,12 @@ public class UniverseJSONRepository{
 
         PlanetSystem solarSystem = new PlanetSystem("Solar System", sun, planetList, "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg");
         planetSystems.add(solarSystem);
+        writeToFile("planets.json",planetList);
+        System.out.println("my mother never loved me");
+        List<Planet> readPlanets = readFromFile("planets.json");
+        System.out.println(readPlanets);
     }
+
 
     public UniverseJSONRepository(String fileName) {
         this(new File(fileName));
@@ -40,13 +46,25 @@ public class UniverseJSONRepository{
 
     }
 
-    public void readFromFile(){
-        ObjectMapper objectMapper = new ObjectMapper();
+    public List<Planet> readFromFile(String file){
+        List<Planet> planetList = new ArrayList<>();
 
         try{
-            PlanetSystem[] cheesecake = objectMapper.readValue(jsonFile, PlanetSystem[].class);
-            planetSystems = new ArrayList(Arrays.asList(cheesecake));
+            ObjectMapper objectMapper = new ObjectMapper();
+            Planet[] cheesecake = objectMapper.readValue(file, Planet[].class);
+            planetList = new ArrayList(Arrays.asList(cheesecake));
         } catch (IOException e){
+            e.printStackTrace();
+        }
+        return planetList;
+    }
+
+    private void writeToFile(String file, ArrayList<Planet> planetList) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            System.out.println("got here");
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(file), planetList);
+        } catch(IOException e){
             e.printStackTrace();
         }
 
