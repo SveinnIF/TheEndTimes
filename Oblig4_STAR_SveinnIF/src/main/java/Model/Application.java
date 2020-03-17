@@ -1,21 +1,15 @@
 package Model;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import io.javalin.Javalin;
 import io.javalin.plugin.rendering.vue.VueComponent;
 
 
 public class Application {
+
+
     public static void main(String[] args) {
         Javalin app = Javalin.create().start();
-
+        System.out.println("CUMMIES IN MY TUMMIES");
         app.config.enableWebjars();
 
         app.get("/planet-systems/:planet-system-id", new VueComponent("planet-system-detail"));
@@ -32,7 +26,11 @@ public class Application {
 
         app.get("/", ctx -> ctx.result("Hello, world"));
 
+        UniverseJSONRepository universeJSONRepository = new UniverseJSONRepository();
 
+//        for (Planet planet : universeJSONRepository.getPlanetList()){
+//            System.out.println(planet.getName());
+//        }
 
     }
 }

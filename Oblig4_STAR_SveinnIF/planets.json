@@ -1,0 +1,302 @@
+[ {
+  "name" : "Solar System",
+  "centerStar" : {
+    "type" : "star",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+    "name" : "The Sun",
+    "radius" : 695342.0,
+    "mass" : 1.9885E30,
+    "effectiveTemp" : 5777.0
+  },
+  "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+  "planets" : [ {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Transit_Of_Mercury%2C_May_9th%2C_2016.png/480px-Transit_Of_Mercury%2C_May_9th%2C_2016.png",
+    "semiMajorAxis" : 0.387,
+    "orbitalPeriod" : 88.0,
+    "eccentricity" : 0.206,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Mercury",
+    "radius" : 2439.7,
+    "mass" : 3.283E23,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
+    "semiMajorAxis" : 0.723,
+    "orbitalPeriod" : 225.0,
+    "eccentricity" : 0.007,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Venus",
+    "radius" : 6051.8,
+    "mass" : 4.867E24,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/NASA_Earth_America_2002.jpg/480px-NASA_Earth_America_2002.jpg",
+    "semiMajorAxis" : 1.0,
+    "orbitalPeriod" : 365.0,
+    "eccentricity" : 0.017,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Earth",
+    "radius" : 6371.0,
+    "mass" : 5.972E24,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Mars_23_aug_2003_hubble.jpg/480px-Mars_23_aug_2003_hubble.jpg",
+    "semiMajorAxis" : 1.524,
+    "orbitalPeriod" : 687.0,
+    "eccentricity" : 0.093,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Mars",
+    "radius" : 3389.5,
+    "mass" : 6.39E23,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg/480px-Jupiter_and_its_shrunken_Great_Red_Spot.jpg",
+    "semiMajorAxis" : 5.2044,
+    "orbitalPeriod" : 4380.0,
+    "eccentricity" : 0.049,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Jupiter",
+    "radius" : 69911.0,
+    "mass" : 1.898E27,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Saturn_from_Cassini_Orbiter_-_Square_%282004-10-06%29.jpg/480px-Saturn_from_Cassini_Orbiter_-_Square_%282004-10-06%29.jpg",
+    "semiMajorAxis" : 9.5826,
+    "orbitalPeriod" : 10585.0,
+    "eccentricity" : 0.057,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Saturn",
+    "radius" : 58232.0,
+    "mass" : 5.683E26,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/480px-Uranus2.jpg",
+    "semiMajorAxis" : 19.2184,
+    "orbitalPeriod" : 30660.0,
+    "eccentricity" : 0.046,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Uranus",
+    "radius" : 25362.0,
+    "mass" : 8.681E25,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Neptune_Full_%28cropped%29.jpg/480px-Neptune_Full_%28cropped%29.jpg",
+    "semiMajorAxis" : 30.11,
+    "orbitalPeriod" : 60225.0,
+    "eccentricity" : 0.01,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Neptune",
+    "radius" : 24622.0,
+    "mass" : 1.024E26,
+    "effectiveTemp" : 0.0
+  } ],
+  "planetList" : [ {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Transit_Of_Mercury%2C_May_9th%2C_2016.png/480px-Transit_Of_Mercury%2C_May_9th%2C_2016.png",
+    "semiMajorAxis" : 0.387,
+    "orbitalPeriod" : 88.0,
+    "eccentricity" : 0.206,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Mercury",
+    "radius" : 2439.7,
+    "mass" : 3.283E23,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
+    "semiMajorAxis" : 0.723,
+    "orbitalPeriod" : 225.0,
+    "eccentricity" : 0.007,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Venus",
+    "radius" : 6051.8,
+    "mass" : 4.867E24,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/NASA_Earth_America_2002.jpg/480px-NASA_Earth_America_2002.jpg",
+    "semiMajorAxis" : 1.0,
+    "orbitalPeriod" : 365.0,
+    "eccentricity" : 0.017,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Earth",
+    "radius" : 6371.0,
+    "mass" : 5.972E24,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Mars_23_aug_2003_hubble.jpg/480px-Mars_23_aug_2003_hubble.jpg",
+    "semiMajorAxis" : 1.524,
+    "orbitalPeriod" : 687.0,
+    "eccentricity" : 0.093,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Mars",
+    "radius" : 3389.5,
+    "mass" : 6.39E23,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg/480px-Jupiter_and_its_shrunken_Great_Red_Spot.jpg",
+    "semiMajorAxis" : 5.2044,
+    "orbitalPeriod" : 4380.0,
+    "eccentricity" : 0.049,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Jupiter",
+    "radius" : 69911.0,
+    "mass" : 1.898E27,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Saturn_from_Cassini_Orbiter_-_Square_%282004-10-06%29.jpg/480px-Saturn_from_Cassini_Orbiter_-_Square_%282004-10-06%29.jpg",
+    "semiMajorAxis" : 9.5826,
+    "orbitalPeriod" : 10585.0,
+    "eccentricity" : 0.057,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Saturn",
+    "radius" : 58232.0,
+    "mass" : 5.683E26,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/480px-Uranus2.jpg",
+    "semiMajorAxis" : 19.2184,
+    "orbitalPeriod" : 30660.0,
+    "eccentricity" : 0.046,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Uranus",
+    "radius" : 25362.0,
+    "mass" : 8.681E25,
+    "effectiveTemp" : 0.0
+  }, {
+    "type" : "Planet",
+    "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Neptune_Full_%28cropped%29.jpg/480px-Neptune_Full_%28cropped%29.jpg",
+    "semiMajorAxis" : 30.11,
+    "orbitalPeriod" : 60225.0,
+    "eccentricity" : 0.01,
+    "centralCelestialBody" : {
+      "type" : "star",
+      "pictureUrl" : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+      "name" : "The Sun",
+      "radius" : 695342.0,
+      "mass" : 1.9885E30,
+      "effectiveTemp" : 5777.0
+    },
+    "name" : "Neptune",
+    "radius" : 24622.0,
+    "mass" : 1.024E26,
+    "effectiveTemp" : 0.0
+  } ]
+} ]

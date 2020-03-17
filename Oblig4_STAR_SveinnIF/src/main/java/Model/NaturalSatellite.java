@@ -48,7 +48,7 @@ public abstract class NaturalSatellite extends CelestialBody {
         if (unit.equals("deg")) {
             phi = Math.toRadians(degrees);
         }
-        return ((semiMajorAxis * (1 - Math.pow(eccentricity, 2))) / (1 + (eccentricity * Math.cos(phi)))) * super.getOneAU();
+        return ((semiMajorAxis * (1 - Math.pow(eccentricity, 2))) / (1 + (eccentricity * Math.cos(phi)))) * oneAU;
     }
 
 
@@ -57,7 +57,7 @@ public abstract class NaturalSatellite extends CelestialBody {
         if (unit.equals("km")) {
             multiplier = 1000;
         }
-        return (Math.sqrt((super.getGraviConst() * centralCelestialBody.getMass()) / (super.getRadius() + distanceToCentralBody(degrees, "deg") * 1000)) / multiplier);
+        return (Math.sqrt((graviConst * centralCelestialBody.getMass()) / (super.getRadius() + distanceToCentralBody(degrees, "deg") * 1000)) / multiplier);
     }//can do Math.round() or one of the other rounding features in java but i could not find one that gave the result i wanted
 
     @Override
