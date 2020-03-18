@@ -52,7 +52,9 @@ Benytt så dette repositoriet fremfor det gamle i Application.java. Hvorfor fung
 
 d - Skriving)
 
-Lag en metode som skriver all dataen til fil i JSON-format. Siden det er unødvendig komplisert og oppdatere enkelte områder i en fil er det OK å skrive hele filen på nytt.
+Vi ønsker at endringer vi gjør i dataene i senere oppgaver blir lagret, og er der når vi starter applikasjonen på nytt. Vi skal derfor gjøre klart skriving av disse endringene til fil.
+
+Lag en metode som skriver all dataen til fil i JSON-format. Siden det er unødvendig komplisert og oppdatere enkelte områder i en fil med endringene som er gjort er det OK å skrive hele filen på nytt.
 
 Oppgave 2.2 - Fillesing og nytt CSV repository
 
