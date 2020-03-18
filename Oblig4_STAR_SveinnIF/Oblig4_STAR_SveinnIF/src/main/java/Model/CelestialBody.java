@@ -1,5 +1,6 @@
 package Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -16,14 +17,14 @@ import org.jetbrains.annotations.NotNull;
 public class CelestialBody implements Comparable<CelestialBody> {
     private String name,pictureUrl;
     private double radius,mass,effectiveTemp;
-    private static final double Mjup = 1.898E27;
-    private static final double Rjup = 71492;
-    private static final double Rearth = 6371;
-    private static final double Mearth = 5.972E24;
-    private static final double Msun = 1.9885E30;
-    private static final double Rsun = 695342;
-    private static final double oneAU = 149597871;
-    private static final double graviConst = 6.674E-11;
+    public static final double Mjup = 1.898E27;
+    public static final double Rjup = 71492;
+    public static final double Rearth = 6371;
+    public static final double Mearth = 5.972E24;
+    public static final double Msun = 1.9885E30;
+    public static final double Rsun = 695342;
+    public static final double oneAU = 149597871;
+    public static final double graviConst = 6.674E-11;
 
 
 
@@ -70,36 +71,11 @@ public class CelestialBody implements Comparable<CelestialBody> {
         return effectiveTemp;
     }
 
-    public double getOneAU() {
-        return oneAU;
-    }
-
-    public double getGraviConst() {
-        return graviConst;
-    }
-
-
-    public String getMjup(){
-        return mass / Mjup + " Mjup";
-    }
-    public String getRjup(){
-        return radius / Rjup + " Rjup";
-    }
-    public String getRearth(){
-        return radius / Rearth + " Rearth";
-    }
-    public String getMearth(){
-        return mass / Mearth + " Mearth";
-    }
+    @JsonIgnore
     public double getGravity(){
         return  (graviConst * mass)/Math.pow((radius * 1000),2);
     }
-    public String getMsun(){
-        return mass / Msun + " Msun";
-    }
-    public String getRsun(){
-        return radius / Rsun + " Rsun";
-    }
+
 
     public void setName(String name) {
         this.name = name;

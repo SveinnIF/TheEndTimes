@@ -1,19 +1,15 @@
 package Model;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
-public class UniverseJSONRepository implements IUniverseRepository{
-
+public class UniverseCSVRepository implements IUniverseRepository{
     private ArrayList<PlanetSystem> planetSystems = new ArrayList<>();
-   private List<Planet> planetList = new ArrayList<>();
-    public UniverseJSONRepository(){
+    private List<Planet> planetList = new ArrayList<>();
+    public UniverseCSVRepository(){
+
         Star sun = new Star("The Sun", 1.9885E30, 695342, 5777, "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg");
         ArrayList<Planet> planetList = new ArrayList<>();
         planetList.add(new Planet("Mercury", 3.283E23, 2439.7, 0.387, 0.206, 88, sun, "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Transit_Of_Mercury%2C_May_9th%2C_2016.png/480px-Transit_Of_Mercury%2C_May_9th%2C_2016.png"));
@@ -27,42 +23,38 @@ public class UniverseJSONRepository implements IUniverseRepository{
 
         PlanetSystem solarSystem = new PlanetSystem("Solar System", sun, planetList, "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg");
         planetSystems.add(solarSystem);
-        writeToFile("planets.json",planetSystems);
 
-        List<PlanetSystem> readPlanets = readFromFile("planets.json");
+        HashMap<String,PlanetSystem> readPlanets = readPlanetFromFile("planets_100.csv");
         System.out.println(readPlanets);
-
     }
 
-    public List<Planet> getPlanetList() {
-        return planetList;
-    }
-
-
-    public List<PlanetSystem> readFromFile(String filePath){
-        ArrayList planetList = new ArrayList<>();
-
-        File file = new File(filePath);
-
+    public static HashMap<String, PlanetSystem> readPlanetFromFile(String file) {
+        HashMap<String, PlanetSystem> planetsFromFile = new HashMap<>();
 
         try{
-            ObjectMapper objectMapper = new ObjectMapper();
-            PlanetSystem[] cheesecake = objectMapper.readValue(file, PlanetSystem[].class);
-            planetList = new ArrayList(Arrays.asList(cheesecake));
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-        return planetList;
-    }
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line;
 
-    private void writeToFile(String file, ArrayList<PlanetSystem> planetList) {
-        ObjectMapper objectMapper = new ObjectMapper();
-        try{
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(file), planetList);
-        } catch(IOException e){
-            e.printStackTrace();
-        }
+            while ((line = bufferedReader.readLine()) != null) {
 
+                String[] splitter = line.split(",");
+
+                //Star star = new Star(splitter[2], Double.parseDouble(splitter[3]), Double.parseDouble(splitter[4]), Double.parseDouble(splitter[5]), splitter[6]);
+                if (!planetsFromFile.containsKey(splitter[0])) {
+                    planetsFromFile.put(splitter[0], new PlanetSystem(splitter[0], new Star(splitter[2], Double.parseDouble(splitter[3]),
+                            Double.parseDouble(splitter[4]), Double.parseDouble(splitter[5]), splitter[6]), new ArrayList<Planet>(), splitter[1]));
+                }
+                planetsFromFile.get(splitter[0]).getPlanets().add(new Planet(splitter[7], Double.parseDouble(splitter[8]), Double.parseDouble(splitter[9]),
+                        Double.parseDouble(splitter[10]), Double.parseDouble(splitter[11]), Double.parseDouble(splitter[12]),planetsFromFile.get(splitter[0]).getCenterStar(), splitter[13]));
+//<planet system name>, <system image url>, <star name>, <star mass>, <star radius>, <star temperature>, <star image url>, <planet name>, <planet mass>, <planet radius>, <planet semi-major axis>,<planet eccentricity>, <planet orbital period>, <planet image url>
+            }
+
+        } catch (FileNotFoundException fnfe) {
+            System.out.println(fnfe.getMessage());
+        } catch (IOException ioexc) {
+            System.out.println(ioexc.getLocalizedMessage());
+        }
+        return planetsFromFile;
     }
 
     @Override
@@ -99,5 +91,3 @@ public class UniverseJSONRepository implements IUniverseRepository{
         this.planetSystems = planetSystems;
     }
 }
-
-
